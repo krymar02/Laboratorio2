@@ -1,0 +1,18 @@
+
+#Aqui agrego el codigo sugerido por la profe 
+#Seleccione el archivo qu se encuentra en home llamado ejercicios
+
+[Unit]
+Description=Servicio de Monitoreo de Cambios en Directorios
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/krymar02/ejercicios_lab2/monitoreo_cambios.sh
+WorkingDirectory=/home/krymar02/ejercicios_lab2
+Restart=always
+User=krymar02
+Group=krymar02
+
+[Install]
+WantedBy=multi-user.target
